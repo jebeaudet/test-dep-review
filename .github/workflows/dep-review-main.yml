@@ -1,0 +1,12 @@
+name: "Security CI"
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  submit-dependencies:
+    name: Dependency Submission
+    uses: coveo-platform/actions/.github/workflows/java-maven-openjdk-dependency-submission.yml@main
+    with:
+      jdk-version: 21
